@@ -48,6 +48,77 @@
 				</view>
 			</view>
 			
+			<view class="m-bd">
+				<view class="title">
+					<view class="u-tit">
+						牛汽产品
+					</view>
+					<view class="u-stit">
+						Niuqi Product
+					</view>
+					<view class="u-line">
+						line
+					</view>
+				</view>
+				<view class="g-product">
+					<view class="i-product">
+						<view class="">
+							<view class="pro-img">
+								<image src="../../static/img/index/icon-p1.png" mode=""></image>
+								<!-- <text>牛汽商城</text> -->
+							</view>
+						</view>
+						<view class="pro-con">
+							<view class="pro-tit">
+								牛汽商城
+							</view>
+							<view class="pro-desc">
+								让汽配买卖更透明，多、快、好、省的解决您的养车和修车问题!
+							</view>
+							<view class="btn-detail">
+								查看详情 >>
+							</view>
+						</view>
+					</view>
+					<view class="i-product">
+						<view class="">
+							<view class="pro-img">
+								<image src="../../static/img/index/icon-p2.png" mode=""></image>
+							</view>
+						</view>
+						<view class="pro-con">
+							<view class="pro-tit">
+								牛家店
+							</view>
+							<view class="pro-desc">
+								牛汽在线下为客户建立的社区级消费终端，有车人可就近享受优质服务！
+							</view>
+							<view class="btn-detail">
+								查看详情 >>
+							</view>
+						</view>
+					</view>
+					<view class="i-product">
+						<view class="">
+							<view class="pro-img">
+								<image src="../../static/img/index/icon-p3.png" mode=""></image>
+							</view>
+						</view>
+						<view class="pro-con">
+							<view class="pro-tit">
+								车险白条
+							</view>
+							<view class="pro-desc">
+								车险白条是牛汽合作伙伴，买车险分10期免息，0利息0手续费！
+							</view>
+							<view class="btn-detail">
+								查看详情 >>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			
 		</view>
 	</view>
 </template>

@@ -15,7 +15,7 @@
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		border-bottom: 1upx solid #ccc;
+		border-bottom: 1upx solid #d4d4d4;
 		.u-tit{
 			font-size: 40upx;
 			line-height: 80upx;
@@ -39,7 +39,7 @@
 		padding: 40upx 35upx;
 		display: flex;
 		flex-direction: column;
-		border-bottom: 1upx solid #ccc;
+		border-bottom: 1upx solid #d4d4d4;
 		.img-about{
 			width: 100%;
 			height: 372upx;
@@ -60,5 +60,40 @@
 		text-align: center;
 		background-color: #f00;
 		border-radius: 10upx;
+	}
+	.g-product{
+		border-bottom: 1upx solid #d4d4d4;
+	}
+	.i-product{
+		padding: 40upx 35upx;
+		display: flex;
+		flex-direction: row;
+		.pro-img{
+			display: flex;
+			justify-content: start;
+			line-height: 64upx;
+			margin-right: 40upx;
+			image{
+				width: 64upx;
+				height: 64upx;
+			}
+		}
+		.pro-con{
+			display: flex;
+			flex-direction: column;
+			.pro-tit{
+				font-size: 40upx;
+				line-height: 64upx;
+			}
+			.pro-desc{
+				padding: 20upx 0;
+				font-size: 32upx;
+				line-height: 50upx;
+			}
+			.btn-detail{
+				color: #f00;
+			}
+		}
+		
 	}
 }
