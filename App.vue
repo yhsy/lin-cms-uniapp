@@ -13,5 +13,10 @@
 </script>
 
 <style>
-	/*每个页面公共css */
+	/* ColorUI */
+    @import "colorui/main.css";
+    @import "colorui/icon.css";
+	
+	/* 全局样式 */
+	@import "static/app.css";
 </style>
