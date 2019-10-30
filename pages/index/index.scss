@@ -2,3 +2,63 @@
 	width: 750upx;
 	height: 400upx;
 }
+.g-bd{
+	margin:20upx 0;
+	background-color: #fff;
+}
+.m-bd{
+	padding: 20upx 0;
+	.title{
+		width: 320upx;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		border-bottom: 1upx solid #ccc;
+		.u-tit{
+			font-size: 40upx;
+			line-height: 80upx;
+			font-weight: 700;
+		}
+		.u-stit{
+			font-size: 24upx;
+			line-height: 40upx;
+			color: #ccc;
+		}
+		.u-line{
+			width: 160upx;
+			text-indent: -9999upx;
+			position: absolute;
+			bottom:-4upx;
+			height: 8upx;
+			background-color: #f00;
+		}
+	}
+	.i-about{
+		padding: 40upx 35upx;
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1upx solid #ccc;
+		.img-about{
+			width: 100%;
+			height: 372upx;
+		}
+		.about-con{
+			font-size: 32upx;
+			text-indent: 2em;
+			padding: 20upx 0;
+			line-height: 50upx;
+		}
+	}
+	.btn-more{
+		width: 100%;
+		height: 80upx;
+		line-height: 80upx;
+		font-size: 32upx;
+		color: #fff;
+		text-align: center;
+		background-color: #f00;
+		border-radius: 10upx;
+	}
+}
