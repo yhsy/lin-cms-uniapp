@@ -1,16 +1,89 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	// 页面路由配置
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/join/join",
+			"style": {
+				"navigationBarTitleText": "招商加盟"
+			}
+        }
+        ,{
+            "path" : "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "新闻动态"
+			}
+        }
+        ,{
+            "path" : "pages/jobs/jobs",
+			"style": {
+				"navigationBarTitleText": "人才招聘"
+			}
+        }
+        ,{
+            "path" : "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+        }
+    ],
+	// 全局配置
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "牛汽官网",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	// 底部导航栏
+	"tabBar":{
+		// 文字颜色
+		"color":"#bfbfbf",
+		// 文字选中颜色
+		"selectedColor":"#515151",
+		// 上边框样式
+		"borderStyle":"black",
+		// 背景色
+		"backgroundColor":"#FFFFFF",
+		"list":[
+			{
+				// 页面路径
+				"pagePath":"pages/index/index",
+				// tab标题
+				"text":"首页",
+				// 默认图标
+				"iconPath":"static/icon/home.png",
+				// 选中图标
+				"selectedIconPath":"static/icon/home-fill.png"
+			},
+			{
+				"pagePath":"pages/join/join",
+				"text":"加盟",
+				"iconPath":"static/icon/product.png",
+				"selectedIconPath":"static/icon/product-fill.png"
+			},
+			{
+				"pagePath":"pages/news/news",
+				"text":"新闻",
+				"iconPath":"static/icon/news.png",
+				"selectedIconPath":"static/icon/news-fill.png"
+			},
+			{
+				"pagePath":"pages/jobs/jobs",
+				"text":"招聘",
+				"iconPath":"static/icon/jobs.png",
+				"selectedIconPath":"static/icon/jobs-fill.png"
+			},
+			{
+				"pagePath":"pages/about/about",
+				"text":"关于",
+				"iconPath":"static/icon/about.png",
+				"selectedIconPath":"static/icon/about-fill.png"
+			}
+		]
 	}
 }
