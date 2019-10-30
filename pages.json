@@ -4,31 +4,51 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"app-plus":{
+					// 禁用原生导航栏
+					"titleNView": false
+				}
 			}
 		}
 	    ,{
             "path" : "pages/join/join",
 			"style": {
-				"navigationBarTitleText": "招商加盟"
+				"navigationBarTitleText": "招商加盟",
+				"app-plus":{
+					// 禁用原生导航栏
+					"titleNView": false
+				}
 			}
         }
         ,{
             "path" : "pages/news/news",
 			"style": {
-				"navigationBarTitleText": "新闻动态"
+				"navigationBarTitleText": "新闻动态",
+				"app-plus":{
+					// 禁用原生导航栏
+					"titleNView": false
+				}
 			}
         }
         ,{
             "path" : "pages/jobs/jobs",
 			"style": {
-				"navigationBarTitleText": "人才招聘"
+				"navigationBarTitleText": "人才招聘",
+				"app-plus":{
+					// 禁用原生导航栏
+					"titleNView": false
+				}
 			}
         }
         ,{
             "path" : "pages/about/about",
 			"style": {
-				"navigationBarTitleText": "关于我们"
+				"navigationBarTitleText": "关于我们",
+				"app-plus":{
+					// 禁用原生导航栏
+					"titleNView": false
+				}
 			}
         }
     ],
