@@ -89,11 +89,51 @@
 				padding: 20upx 0;
 				font-size: 32upx;
 				line-height: 50upx;
+				color: #9d9d9d;
 			}
 			.btn-detail{
 				color: #f00;
 			}
 		}
-		
+	}
+	.g-service{
+		padding: 40upx 35upx;
+		border-bottom: 1upx solid #d4d4d4;
+	}
+	.i-service{
+		width: 100%;
+		height: 520upx;
+		position: relative;
+		margin-bottom: 20upx;
+		.img-case{
+			width: 680upx;
+			height: 520upx;
+		}
+		.u-mask{
+			position: absolute;
+			top:0;
+			left:0;
+			padding: 0 50upx;
+			width: 680upx;
+			height: 520upx;
+			background-color: rgba(0,0,0,0.6);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #fff;
+			.name{
+				font-size: 36upx;
+				text-align: center;
+				line-height: 100upx;
+			}
+			.cont{
+				font-size: 28upx;
+				text-indent: 2em;
+			}
+			text{
+				color: #f00;
+				font-weight: 700;
+			}
+		}
 	}
 }

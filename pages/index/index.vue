@@ -23,6 +23,7 @@
 		</view>
 		<!-- 内容区域 -->
 		<view class="g-bd">
+			<!-- 牛汽介绍 -->
 			<view class="m-bd">
 				<view class="title">
 					<view class="u-tit">
@@ -47,7 +48,7 @@
 					</view>
 				</view>
 			</view>
-			
+			<!-- 牛汽产品 -->
 			<view class="m-bd">
 				<view class="title">
 					<view class="u-tit">
@@ -118,7 +119,45 @@
 					</view>
 				</view>
 			</view>
-			
+			<!-- 服务案例 -->
+			<view class="m-bd">
+				<view class="title">
+					<view class="u-tit">
+						服务案例
+					</view>
+					<view class="u-stit">
+						Service Case
+					</view>
+					<view class="u-line">
+						line
+					</view>
+				</view>
+				
+				<view class="g-service">
+					<view class="i-service">
+						<image class="img-case" src="../../static/img/index/img-case1.jpg" mode=""></image>
+						<view class="u-mask">
+							<view class="name">
+								某集团王总-英菲尼迪维修案例
+							</view>
+							<view class="cont">
+								王总的英菲尼迪维修养护4S店报价<text>52000元</text>，通过牛汽养车平台下单全面维修，花费<text>17000元</text>，立省<text>35000元</text>
+							</view>
+						</view>
+					</view>
+					<view class="i-service">
+						<image class="img-case" src="../../static/img/index/img-case2.jpg" mode=""></image>
+						<view class="u-mask">
+							<view class="name">
+								某公司张先生-奥迪Q5维修案例
+							</view>
+							<view class="cont">
+								张先生的奥迪Q5变速箱油冷却阀断路，发动机控制单元的转速不可信信号，由于离合器温度造成扭矩受限，变速箱油冷却阀对正极短路，冷却油阀电气故障。奥迪4S店报价<text>32000元</text>，，牛汽养车仅仅花费<text>13800元</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
