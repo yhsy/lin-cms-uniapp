@@ -184,7 +184,19 @@
 			}
 		},
 		onLoad() {
-
+			// #ifdef MP-WEIXIN
+				// 小程序--云数据库使用
+				const db = wx.cloud.database();
+				db.collection('banner').get({
+					success: res => {
+						console.log('返回成功')
+						console.log(res)
+					},
+					fail: err => {
+						console.log('错误')
+					}
+				});
+			// #endif
 		},
 		methods: {
 
