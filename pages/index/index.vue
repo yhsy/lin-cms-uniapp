@@ -158,6 +158,34 @@
 					</view>
 				</view>
 			</view>
+			
+			<!-- 新闻动态 -->
+			<view class="m-bd">
+				<view class="title">
+					<view class="u-tit">
+						新闻动态
+					</view>
+					<view class="u-stit">
+						Niuqi News
+					</view>
+					<view class="u-line">
+						line
+					</view>
+				</view>
+				<view class="g-news">
+					<view class="i-news">
+						<view class="tit">
+							恭贺牛汽配帮购中心“牛大帮购”成立
+						</view>
+						<view class="img-news">
+							<image src="../../static/img/index/img-news.jpg" mode=""></image>
+						</view>
+						<view class="btn-more">
+							MORE +
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>

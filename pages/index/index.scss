@@ -136,4 +136,24 @@
 			}
 		}
 	}
+	.g-news{
+		padding: 40upx 35upx;
+		border-bottom: 1px solid #d4d4d4;
+		.i-news{
+			width: 680upx;
+		}
+		.tit{
+			line-height: 80upx;
+			text-align: center;
+			font-size: 32upx;
+			font-weight: 700;
+		}
+		.img-news{
+			margin: 20upx 0;
+			image{
+				width: 680upx;
+				height: 454upx;
+			}
+		}
+	}
 }
