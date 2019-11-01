@@ -156,4 +156,17 @@
 			}
 		}
 	}
+	.i-env{
+		margin: 40upx 35upx;
+		width: 680upx;
+		display: flex;
+		flex-direction: column;
+		.img-env{
+			margin: 20upx 0;
+			image{
+				width: 680upx;
+				height: 680upx;
+			}
+		}
+	}
 }

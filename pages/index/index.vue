@@ -186,6 +186,34 @@
 					</view>
 				</view>
 			</view>
+			
+			<!-- 牛汽环境 -->
+			<view class="m-bd">
+				<view class="title">
+					<view class="u-tit">
+						牛汽环境
+					</view>
+					<view class="u-stit">
+						Niuqi Environment
+					</view>
+					<view class="u-line">
+						line
+					</view>
+				</view>
+				<view class="g-env">
+					<view class="i-env">
+						<view class="img-env">
+							<image src="../../static/img/index/img-company-1.jpg" mode=""></image>
+						</view>
+						<view class="img-env">
+							<image src="../../static/img/index/img-company-2.jpg" mode=""></image>
+						</view>
+						<view class="img-env">
+							<image src="../../static/img/index/img-company-3.jpg" mode=""></image>
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
