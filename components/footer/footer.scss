@@ -1,0 +1,42 @@
+.g-ft{
+	background-color: #23222a;
+	color: #fff;
+	padding: 20upx 35upx;
+}
+.g-ft1{
+	
+}
+.i-contact{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start; 
+	.img-qcode{
+		width: 160upx;
+		margin-right: 20upx;
+		image{
+			width: 160upx;
+			height: 160upx;
+		}
+		text{
+			width: 160upx;
+			display: inline-block;
+			line-height: 60upx;
+			font-size: 28upx;
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+	.u-tel{
+		padding: 30upx;
+		.tit{
+			font-size: 30upx;
+			font-weight: 700;
+		}
+		.num{
+			font-size: 30upx;
+			text-indent:2em;
+			line-height: 60upx;
+			font-weight: 700;
+		}
+	}
+}

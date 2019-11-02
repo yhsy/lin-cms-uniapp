@@ -215,11 +215,18 @@
 				</view>
 			</view>
 		</view>
+		
+		<!-- 底部区域 -->
+		<i-footer></i-footer>
 	</view>
 </template>
 
 <script>
+	import iFooter from '../../components/footer/footer.vue'
 	export default {
+		components: {
+			iFooter
+		},
 		data() {
 			return {
 				// 轮播图配置
