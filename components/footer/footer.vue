@@ -21,18 +21,18 @@
 			</view>
 		</view>
 		<view class="g-ft2">
-			<view class="">
+			<view class="gongan">
 				<view>
 					<image src="../../static/img/common/icon-gongan.png" mode=""></image>
 				</view>
-				<view class="">
+				<view class="p">
 					浙公网安备 33010502003702号 
 				</view>
 			</view>
-			<view class="">
+			<view class="u-text">
 				浙ICP备16027418号-2 
 			</view>
-			<view class="">
+			<view class="u-text">
 				© 2015-2018 浙江特浦科技有限公司
 			</view>
 		</view>
