@@ -217,7 +217,7 @@
 		</view>
 		
 		<!-- 底部区域 -->
-		<i-footer></i-footer>
+		<!-- <i-footer></i-footer> -->
 	</view>
 </template>
 
