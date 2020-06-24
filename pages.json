@@ -32,7 +32,7 @@
 			}
         }
         ,{
-            "path" : "pages/news/news",
+            "path" : "pages/news/index",
 			"style": {
 				"navigationBarTitleText": "新闻动态",
 				"app-plus":{
@@ -60,7 +60,11 @@
 					"titleNView": false
 				}
 			}
-        }
+        },
+		{
+			"path": "pages/detail/detail",
+			"style": {}
+		}
     ],
 	// 全局配置
 	"globalStyle": {
@@ -103,7 +107,7 @@
 				"selectedIconPath":"static/icon/jobs-fill.png"
 			},
 			{
-				"pagePath":"pages/news/news",
+				"pagePath":"pages/news/index",
 				"text":"新闻",
 				"iconPath":"static/icon/news.png",
 				"selectedIconPath":"static/icon/news-fill.png"
@@ -119,6 +123,16 @@
 				"text":"关于",
 				"iconPath":"static/icon/about.png",
 				"selectedIconPath":"static/icon/about-fill.png"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]
 	}

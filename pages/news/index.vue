@@ -1,0 +1,226 @@
+<template>
+	<view class="tabs">
+		<!-- android 4.x overflow limit error: 28 layers! -->
+		<scroll-view id="tab-bar" class="tab-bar" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto">
+			<view v-for="(tab,index) in tabList" :key="tab.id" class="uni-tab-item" :id="tab.id" :data-current="index" @click="ontabtap">
+				<text class="uni-tab-item-title" :class="tabIndex==index ? 'uni-tab-item-title-active' : ''">{{tab.name}}</text>
+			</view>
+		</scroll-view>
+		<view class="tab-bar-line"></view>
+		<swiper class="tab-box" :current="tabIndex" :duration="300" @change="onswiperchange" @transition="onswiperscroll" @animationfinish="animationfinish">
+			<swiper-item class="swiper-item" v-for="(page, index) in tabList" :key="index">
+				<!-- #ifndef MP-ALIPAY -->
+				<newsPage class="page-item" :nid="page.newsid" ref="page"></newsPage>
+				<!-- #endif -->
+				<!-- #ifdef MP-ALIPAY -->
+				<newsPage class="page-item" :nid="page.newsid" :ref="'page' + index"></newsPage>
+				<!-- #endif -->
+			</swiper-item>
+		</swiper>
+	</view>
+</template>
+
+<script>
+	import newsPage from './news-page.vue';
+
+	// 缓存每页最多
+	const MAX_CACHE_DATA = 100;
+	// 缓存页签数量
+	const MAX_CACHE_PAGE = 3;
+	const TAB_PRELOAD_OFFSET = 1;
+
+	export default {
+		components: {
+			newsPage
+		},
+		data() {
+			return {
+				tabList: [{
+					id: "tab01",
+					name: '最新',
+					newsid: 0
+				}, {
+					id: "tab02",
+					name: '大公司',
+					newsid: 23
+				}, {
+					id: "tab03",
+					name: '内容',
+					newsid: 223
+				}, {
+					id: "tab04",
+					name: '消费',
+					newsid: 221
+				}, {
+					id: "tab05",
+					name: '娱乐',
+					newsid: 225
+				}, {
+					id: "tab06",
+					name: '区块链',
+					newsid: 208
+				}],
+				tabIndex: 0,
+				cacheTab: [],
+				scrollInto: "",
+				navigateFlag: false
+			}
+		},
+		onReady() {
+			// #ifndef MP-ALIPAY
+			this.pageList = this.$refs.page;
+			// #endif
+			// #ifdef MP-ALIPAY
+			this.pageList = [];
+			for (var i = 0; i < this.tabList.length; i++) {
+				this.pageList.push(this.$refs['page' + i][0]);
+			}
+			// #endif
+
+			this.pageList[0].loadData();
+		},
+		methods: {
+			ontabtap(e) {
+				let index = e.target.dataset.current || e.currentTarget.dataset.current;
+				this.switchTab(index);
+			},
+			onswiperchange(e) {
+				// 注意：百度小程序会触发2次
+
+				// #ifndef APP-PLUS || MP-WEIXIN
+				let index = e.target.current || e.detail.current;
+				this.switchTab(index);
+				// #endif
+			},
+			onswiperscroll(e) {
+				var offsetX = e.detail.dx;
+				var preloadIndex = this.tabIndex;
+				if (offsetX > TAB_PRELOAD_OFFSET) {
+					preloadIndex++;
+				} else if (offsetX < -TAB_PRELOAD_OFFSET) {
+					preloadIndex--;
+				}
+				if (preloadIndex === this.tabIndex || preloadIndex < 0 || preloadIndex > this.pageList.length - 1) {
+					return;
+				}
+				if (this.pageList[preloadIndex].dataList.length === 0) {
+					this.pageList[preloadIndex].loadData();
+				}
+			},
+			animationfinish(e) {
+				// #ifdef APP-PLUS || MP-WEIXIN
+				let index = e.detail.current;
+				this.switchTab(index);
+				// #endif
+			},
+			switchTab(index) {
+				if (this.pageList[index].dataList.length === 0) {
+					this.pageList[index].loadData();
+				}
+
+				if (this.tabIndex === index) {
+					return;
+				}
+
+				// 缓存 tabId
+				if (this.pageList[this.tabIndex].dataList.length > MAX_CACHE_DATA) {
+					let isExist = this.cacheTab.indexOf(this.tabIndex);
+					if (isExist < 0) {
+						this.cacheTab.push(this.tabIndex);
+					}
+				}
+
+				this.tabIndex = index;
+				this.scrollInto = this.tabList[index].id;
+
+				// 释放 tabId
+				if (this.cacheTab.length > MAX_CACHE_PAGE) {
+					let cacheIndex = this.cacheTab[0];
+					this.clearTabData(cacheIndex);
+					this.cacheTab.splice(0, 1);
+				}
+			},
+			clearTabData(e) {
+				this.pageList[e].clear();
+			}
+		}
+	}
+</script>
+
+<style>
+	/* #ifndef APP-PLUS */
+	page {
+		width: 100%;
+		min-height: 100%;
+		display: flex;
+	}
+
+	/* #endif */
+
+	.tabs {
+		flex: 1;
+		flex-direction: column;
+		overflow: hidden;
+		background-color: #ffffff;
+		/* #ifdef MP-ALIPAY || MP-BAIDU */
+		height: 100vh;
+		/* #endif */
+	}
+
+	.tab-bar {
+		width: 750upx;
+		height: 80upx;
+		flex-direction: row;
+		/* #ifndef APP-PLUS */
+		white-space: nowrap;
+		/* #endif */
+	}
+
+	.tab-bar-line {
+		height: 1upx;
+		background-color: #cccccc;
+	}
+
+	.tab-box {
+		flex: 1;
+	}
+
+	.uni-tab-item {
+		/* #ifndef APP-PLUS */
+		display: inline-block;
+		/* #endif */
+		flex-wrap: nowrap;
+		padding-left: 34upx;
+		padding-right: 34upx;
+	}
+
+	.uni-tab-item-title {
+		color: #555;
+		font-size: 30upx;
+		height: 80upx;
+		line-height: 80upx;
+		flex-wrap: nowrap;
+		/* #ifndef APP-PLUS */
+		white-space: nowrap;
+		/* #endif */
+	}
+
+	.uni-tab-item-title-active {
+		color: #007AFF;
+	}
+
+	.swiper-item {
+		flex: 1;
+		flex-direction: column;
+	}
+
+	.page-item {
+		flex: 1;
+		flex-direction: row;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+</style>

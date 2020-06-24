@@ -1,6 +1,6 @@
 {
     "name" : "lin-cms-uniapp",
-    "appid" : "__UNI__93B60FA",
+    "appid" : "__UNI__04E811E",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -56,11 +56,17 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxde3d1d77da49995a",
+        "appid" : "",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "postcss" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : ""
+            }
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true
